@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form id="feedbackForm">
+    <h2>College Feedback Form</h2>
+
+    <!-- Department -->
+    <fieldset>
+        <legend>Department</legend>
+        <select id="department">
+            <option value="">-- Select Department --</option>
+            <option>Computer Science</option>
+            <option>Mechanical</option>
+            <option>Electrical</option>
+            <option>Civil</option>
+            <option>Commerce</option>
+        </select>
+        <div class="error" id="deptError">Please select a department.</div>
+    </fieldset>
+
+    <!-- Rating -->
+    <fieldset>
+        <legend>Rate Your Experience</legend>
+        <input type="radio" name="rating" value="Excellent"> Excellent<br>
+        <input type="radio" name="rating" value="Good"> Good<br>
+        <input type="radio" name="rating" value="Average"> Average<br>
+        <input type="radio" name="rating" value="Poor"> Poor<br>
+        <div class="error" id="ratingError">Please select a rating.</div>
+    </fieldset>
+
+    <!-- Facilities -->
+    <fieldset>
+        <legend>Facilities Used</legend>
+        <input type="checkbox" name="facility" value="Library"> Library<br>
+        <input type="checkbox" name="facility" value="Laboratory"> Laboratory<br>
+        <input type="checkbox" name="facility" value="Sports"> Sports<br>
+        <input type="checkbox" name="facility" value="Cafeteria"> Cafeteria<br>
+        <div class="error" id="facilityError">Select at least one facility.</div>
+    </fieldset>
+
+    <!-- Comments -->
+    <fieldset>
+        <legend>Additional Comments</legend>
+        <textarea id="comments" rows="4"></textarea>
+        <div class="error" id="commentError">Please enter your comments.</div>
+    </fieldset>
+
+    <button type="submit">Submit Feedback</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
