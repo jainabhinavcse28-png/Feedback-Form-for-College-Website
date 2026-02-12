@@ -1,52 +1,143 @@
+/* Background */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Form Box */
 form {
-    width: 500px;
-    margin: 30px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px gray;
+    width: 520px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 35px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    animation: fadeIn 0.7s ease;
 }
 
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #4a3f8c;
+    margin-bottom: 25px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* Fieldsets */
 fieldset {
-    margin-bottom: 15px;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-legend {
-    font-weight: bold;
-}
-
-select, textarea {
-    width: 100%;
-    padding: 5px;
-    margin-top: 5px;
-}
-
-button {
-    padding: 10px 15px;
-    background-color: blue;
-    color: white;
     border: none;
-    border-radius: 5px;
+    background: #f7f8ff;
+    padding: 15px 18px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+fieldset:hover {
+    background: #eef0ff;
+}
+
+/* Legends */
+legend {
+    padding: 0 6px;
+    font-weight: 600;
+    color: #667eea;
+    font-size: 15px;
+}
+
+/* Inputs */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+    transition: 0.3s;
+}
+
+/* Focus Effect */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 6px rgba(102,126,234,0.6);
+    outline: none;
+}
+
+/* Radio & Checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #667eea;
+    transform: scale(1.1);
+    margin-right: 6px;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: darkblue;
+    background: linear-gradient(to right, #764ba2, #667eea);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
 }
 
+/* Error Text */
 .error {
-    color: red;
-    font-size: 14px;
+    color: #d62828;
+    font-size: 13px;
+    margin-top: 4px;
     display: none;
+    font-weight: 500;
 }
 
+/* Error Border */
 .error-border {
-    border: 2px solid red;
+    border: 2px solid #d62828 !important;
+    background: #fff2f2;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
 }
